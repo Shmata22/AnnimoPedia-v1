@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#9ca9e6"><title>Aniimopédia</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">A</span><div><div class="eyebrow">IDYLL · COLLECTION</div><h1>Aniimopédia</h1></div></div>
+    <button class="icon-btn" id="settingsBtn" aria-label="Paramètres">⚙</button>
+  </header>
+  <main>
+    <section class="hero-panel">
+      <div class="hero-copy"><span class="eyebrow">MON ANIILOG</span><h2>Collection</h2><p>Consultez, recherchez et complétez votre collection d’Aniimo.</p></div>
+      <div class="progress-orb"><strong id="progressPct">0%</strong><span>COMPLÉTION</span></div>
+      <div class="progress-block"><div class="progress-meta"><span><b id="capturedCount">0</b> capturés</span><span><b id="totalCount">0</b> au total</span></div><div class="progress-track"><div id="progressBar"></div></div><div class="progress-sub"><span id="remainingCount">0 restant</span><span id="syncState">Sauvegarde locale</span></div></div>
+    </section>
+
+    <section class="toolbar">
+      <label class="search"><span>⌕</span><input id="searchInput" placeholder="Rechercher un Aniimo…" autocomplete="off"></label>
+      <div class="filters" id="filters"><button class="filter active" data-filter="all">Tous</button><button class="filter" data-filter="captured">Capturés</button><button class="filter" data-filter="missing">Non capturés</button><button class="filter" data-filter="favorites">Favoris</button></div>
+      <div class="advanced-row"><select id="typeFilter"><option value="">Tous les éléments</option></select><select id="roleFilter"><option value="">Tous les rôles</option></select><button class="small-btn" id="addBtn">＋ Ajouter</button></div>
+    </section>
+
+    <section class="dex-head"><div><span class="eyebrow">INDEX OFFICIEL</span><h3>ANIIMO</h3></div><span id="resultCount">0 résultats</span></section>
+    <section class="grid" id="grid"></section>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" id="modal"></div></div>
+<script src="app.js"></script>
+</body>
+</html>
